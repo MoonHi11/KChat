@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KayTown.Views.AppTheme">
+    <StackLayout>
+        <BoxView HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </BoxView.GestureRecognizers>
+
+
+        </BoxView>
+        <Frame VerticalOptions="CenterAndExpand" BackgroundColor="{AppThemeBinding Light=#dddddd, Dark=#333333}" HorizontalOptions="CenterAndExpand" HasShadow="False" CornerRadius="10" Margin="10,0,10,0">
+            <StackLayout>
+                <Label Text="Settings" FontSize="25" FontFamily="RSB" FontAttributes="Bold" TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"/>
+
+                <Grid RadioButtonGroup.GroupName="ThemeGroup">
+                    <Frame Grid.Row="0" Grid.Column="2" Padding="0" CornerRadius="15">
+                        <StackLayout BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLight}, Dark={StaticResource BackgroundColorDark}}">
+
+                            <RadioButton  Grid.Row="1" 
+                                                          Grid.Column="0"
+                                                          x:Name="RadioButtonLight"
+                                                          CheckedChanged="RadioButtonSystem_CheckedChanged"
+                                                          Value="Light" CornerRadius="15" BackgroundColor="Transparent">
+
+                            </RadioButton>
+
+                            <Label FontAttributes="Bold"
+                                           FontSize="35" 
+                                           TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"
+                                           Text="light"
+                                           FontFamily="FAS"
+                                           Grid.Column="0" 
+                                           Grid.Row="0"
+                                           HorizontalOptions="Center" 
+                                           VerticalOptions="Center"
+                                           />
+                            <Label FontAttributes="Bold"
+                                            FontSize="Medium" 
+                                            TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"
+                                            Text="Light"
+                                            FontFamily="RSB"
+                                            Grid.Column="0" 
+                                            Grid.Row="1"
+                                            HorizontalOptions="Center" 
+                                            VerticalOptions="Center"
+                                            />
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="1" Padding="0" CornerRadius="15">
+
+
+                        <StackLayout Padding="0" BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLight}, Dark={StaticResource BackgroundColorDark}}">
+
+                            <RadioButton  
+                                          x:Name="RadioButtonDark"
+                                          CheckedChanged="RadioButtonSystem_CheckedChanged"
+                                          Value="Dark"
+                                          CornerRadius="15" BackgroundColor="Transparent">
+                            </RadioButton>
+                            <Label 
+                                          FontAttributes="Bold" FontSize="35" 
+                                          TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"
+                                          Text="Dark" 
+                                          FontFamily="FAS"
+                                          HorizontalOptions="Center" 
+                                          VerticalOptions="Center"
+                                  />
+                            <Label 
+                                          FontAttributes="Bold" FontSize="Medium" 
+                                          TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"
+                                          Text="Dark" 
+                                          FontFamily="RSB"
+                                          HorizontalOptions="Center" 
+                                          VerticalOptions="Center"
+                                  />
+
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Grid.Row="0" Grid.Column="0" Padding="0" CornerRadius="15" HeightRequest="100">
+
+
+                        <StackLayout BackgroundColor="{AppThemeBinding Light={StaticResource BackgroundColorLight}, Dark={StaticResource BackgroundColorDark}}">
+
+                            <RadioButton  Grid.Row="0" 
+                                          Grid.Column="0"
+                                          x:Name="RadioButtonSystem"
+                                          CheckedChanged="RadioButtonSystem_CheckedChanged"
+                                          Value="Default"
+                                          CornerRadius="15" BackgroundColor="Transparent" FontAttributes="Bold" >
+                            </RadioButton>
+                            <Label 
+                                          FontAttributes="Bold" FontSize="35" 
+                                          TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"
+                                          Text="system"
+                                          FontFamily="FAS"
+                                          Grid.Column="0" 
+                                          Grid.Row="1"
+                                          HorizontalOptions="Center" 
+                                          VerticalOptions="Center"
+                                  />
+                            <Label 
+                                          FontAttributes="Bold" FontSize="Medium" 
+                                          TextColor="{AppThemeBinding Light={StaticResource TextColorLight}, Dark={StaticResource TextColorDark}}"
+                                          Text="System"
+                                          FontFamily="RSB"
+                                          Grid.Column="0" 
+                                          Grid.Row="1"
+                                          HorizontalOptions="Center" 
+                                          VerticalOptions="Center"
+                                  />
+
+                        </StackLayout>
+                    </Frame>
+                </Grid>
+            </StackLayout>
+        </Frame>
+        <BoxView HorizontalOptions="FillAndExpand" 
+                 VerticalOptions="FillAndExpand">
+            <BoxView.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+            </BoxView.GestureRecognizers>
+
+
+        </BoxView>
+    </StackLayout>
+</ContentPage>

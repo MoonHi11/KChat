@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KayTown.Views.ChatRoom"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout>
+                <Frame Background="WhiteSmoke">
+                    <Label Text="MoonHill" FontSize="Large" FontAttributes="Bold" HorizontalOptions="Center" TextColor="Black"/>
+                </Frame>
+            </StackLayout>
+
+
+            <Frame Padding="7,2,7,2" Margin="0" HorizontalOptions="Center" CornerRadius="10" Background="white" >
+                <Label Text="Today" HorizontalOptions="Center"/>
+            </Frame>
+            
+            <Frame HorizontalOptions="Start" WidthRequest="100" BackgroundColor="LightGray" CornerRadius="30">
+                <Label Text="Hi" FontSize="Medium"/>
+            </Frame>
+            <Frame HorizontalOptions="End" WidthRequest="100" BackgroundColor="LightGray" CornerRadius="30">
+                <Label Text="Hello" FontSize="Medium"/>
+            </Frame>
+            
+            
+                <StackLayout
+                VerticalOptions="EndAndExpand"
+                >
+                <Frame Margin="5"
+                       CornerRadius="30"
+                       Padding="5,5,5,5"
+                       BackgroundColor="#3344aa44">
+                    <StackLayout Orientation="Horizontal">
+                    <Button Text="➕" HeightRequest="10" WidthRequest="50" Padding="0" CornerRadius="50"/>
+                    <Button Text="❤" HeightRequest="10" WidthRequest="50" Padding="0" CornerRadius="50"/>
+                    <Entry Placeholder="Message"
+                           BackgroundColor="Transparent" WidthRequest="280"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="KayTown.Views.Profile"
+             xmlns:viewModel ="clr-namespace:KayTown.ViewModels"
+             xmlns:Model ="clr-namespace:KayTown.Modelss">
+    <ContentPage.BindingContext>
+        <viewModel:UserViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
+        
+            
+        <ListView 
+    x:Name="JokesList"
+       
+        ItemsSource="{Binding Users}"
+        SelectionMode="Single"
+      
+        RefreshControlColor="#44aa44"
+        IsPullToRefreshEnabled="True"
+        CachingStrategy="RecycleElement"
+        SeparatorVisibility="Default"
+        HasUnevenRows="True"
+        BackgroundColor="Transparent"
+        IsEnabled="True">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="Model:User">
+                    <ViewCell>
+                        <StackLayout>
+                            <Frame HorizontalOptions="CenterAndExpand" CornerRadius="50" HeightRequest="100" WidthRequest="100">
+                                <Image Source=""/>
+                            </Frame>
+                            <Label Text="{Binding UserName}" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Title"/>
+                            <Label Text="Bio" FontSize="Small" />
+                            <Frame HeightRequest="30" Padding="2" Margin="7" WidthRequest="70" CornerRadius="10" BackgroundColor="WhiteSmoke">
+                                <Label Text="{Binding AboutYou}" TextColor="Black"/>
+
+                            </Frame>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
